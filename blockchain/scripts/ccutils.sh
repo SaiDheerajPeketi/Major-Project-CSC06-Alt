@@ -12,8 +12,8 @@ function installChaincode() {
   fi
   { set +x; } 2>/dev/null
   cat log.txt
-  verifyResult $res "Chaincode installation on peer0.org${ORG} has failed"
-  successln "Chaincode is installed on peer0.org${ORG}"
+  verifyResult $res "Chaincode installation on peer.org${ORG} has failed"
+  successln "Chaincode is installed on peers"
 }
 
 # queryInstalled PEER ORG
@@ -25,8 +25,8 @@ function queryInstalled() {
   res=$?
   { set +x; } 2>/dev/null
   cat log.txt
-  verifyResult $res "Query installed on peer0.org${ORG} has failed"
-  successln "Query installed successful on peer0.org${ORG} on channel"
+  verifyResult $res "Query installed on peer.org${ORG} has failed"
+  successln "Query installed successful on peer.org${ORG} on channel"
 }
 
 # approveForMyOrg VERSION PEER ORG
